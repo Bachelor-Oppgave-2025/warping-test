@@ -1,6 +1,6 @@
 # Ball Tracking System
 
-A computer vision system for tracking balls on a pool/billiards table from video.
+A computer vision system for tracking balls on a snooker table from video.
 
 ## Features
 
