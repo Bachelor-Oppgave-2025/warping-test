@@ -9,7 +9,7 @@ import cv2
 import numpy as np
 
 from detection import (
-    detect_balls_blob,
+    detect_balls,
     detect_pockets_warp,
     detect_table_corners,
     detect_table_orientation,
@@ -244,7 +244,7 @@ def _process_frame(frame, warper, tracker, current_pockets, pocket_states):
     """Run the processing pipeline for a single frame."""
     frame = _downscale_frame(frame)
     warped = warper.warp(frame)
-    detections = detect_balls_blob(warped)
+    detections = detect_balls(warped)
     tracked = tracker.update(detections)
 
     if not current_pockets:
